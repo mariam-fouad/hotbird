@@ -4,15 +4,7 @@ import { NavLink } from 'react-router-dom'
 const navElement =(props)=>{
     const NavItem = styled.li`
         text-decoration:none;
-        padding: 1rem;
-        padding-bottom: 1.25rem;
-        border-bottom: .1rem solid transparent;
-        float: left;
-        display: block;
-        :hover {
-            border-bottom-color:  red;
-            background-color: #e3e3e3;
-          }
+        
 
         `;
     
@@ -22,10 +14,28 @@ const navElement =(props)=>{
         font-weight:900;
         text-align: center;
         text-decoration: none;
+        padding: 1rem;
+        padding-bottom: 1.25rem;
+        border-bottom: .1rem solid transparent;
+        float: left;
+        display: block;
+        transition: all 0.4s
+
+        :hover {
+            border-bottom-color:  red;
+            background-color: #e3e3e3;
+          }
         `
     return (
         <NavItem>
-            <NavLinkStyles to={props.link} >{props.children}</NavLinkStyles>
+            <NavLinkStyles 
+           activeStyle={{
+            borderBottomColor:  'red',
+            backgroundColor: '#e3e3e3'
+          }}
+            to={props.link}>
+                {props.children}
+            </NavLinkStyles>
         </NavItem>
     );
 }
