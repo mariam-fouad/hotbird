@@ -5,12 +5,17 @@ const navElement =(props)=>{
     const NavItem = styled.li`
         text-decoration:none;
         padding: 1rem;
+        padding-bottom: 1.25rem;
         float: left;
+        display: block;
+        :hover {
+            border-bottom: .1rem solid red;
+            background-color: #e3e3e3;
+          }
 
         `;
     
     const NavLinkStyles = styled(NavLink)`
-        display: block;
         color: black;
         font-size:0.7rem;
         font-weight:900;

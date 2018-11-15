@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import NavElement from './navElement';
 const nav =()=>{
     const Nav = styled.nav`
-        right:0;
+    
         `;
     
     const List = styled.ul`

@@ -15,6 +15,7 @@ const header =()=>{
         right: 0;
         z-index:100;
         justify-content: space-between;
+        align-items: center;
 
     `;
     return(
