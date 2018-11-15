@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
+import {connect} from 'react-redux';
 
 import Nav from './headerComponents/nav';
 import Logo from './headerComponents/logo';
-const header =()=>{
+const header =(props)=>{
 
     const Header = styled.header`
         background-color: #cecece70;;
@@ -22,9 +23,15 @@ const header =()=>{
         <Header>
             <Logo/>
             <Nav/>
+            {props.themeColors.colorPrimar}
         </Header>
         
     )
 }
 
-export default header;
+const mapStateToProps = state=>{
+    return {
+      themeColors: state.themeReducer.themes[state.themeReducer.selectedTheme],
+    }
+  }
+export default connect(mapStateToProps)(header);

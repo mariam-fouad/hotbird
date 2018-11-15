@@ -1,7 +1,8 @@
-import ThemeReducer from './ThemeReduce';
+import themeReducer from './themeReduce';
+
 const reducer= (state={},action)=>{
     return {
-        ThemeReducer:ThemeReducer(state.ThemeReducer,action),
+        themeReducer:themeReducer(state.themeReducer,action),
     };
   }
 export default reducer;
