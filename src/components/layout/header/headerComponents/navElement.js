@@ -12,7 +12,8 @@ const navElement =(props)=>{
     const NavLinkStyles = styled(NavLink)`
         display: block;
         color: black;
-        font-size:0.5rem;
+        font-size:0.7rem;
+        font-weight:900;
         text-align: center;
         text-decoration: none;
         `
