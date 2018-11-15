@@ -6,10 +6,11 @@ const navElement =(props)=>{
         text-decoration:none;
         padding: 1rem;
         padding-bottom: 1.25rem;
+        border-bottom: .1rem solid transparent;
         float: left;
         display: block;
         :hover {
-            border-bottom: .1rem solid red;
+            border-bottom-color:  red;
             background-color: #e3e3e3;
           }
 
