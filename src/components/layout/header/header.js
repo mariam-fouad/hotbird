@@ -7,7 +7,7 @@ const header =()=>{
 
     const Header = styled.header`
         background-color: #cecece70;;
-        height:13vh;
+        height:3rem;
         display:flex;
         position:fixed;
         top:0;
