@@ -7,7 +7,7 @@ import Logo from './headerComponents/logo';
 const header =(props)=>{
 
     const Header = styled.header`
-        background-color: #cecece70;;
+        background-color:${props.themeColors.colorSecondaryTrans}; 
         height:3rem;
         display:flex;
         position:fixed;
@@ -23,7 +23,6 @@ const header =(props)=>{
         <Header>
             <Logo/>
             <Nav/>
-            {props.themeColors.colorPrimar}
         </Header>
         
     )

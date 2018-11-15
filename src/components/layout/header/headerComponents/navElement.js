@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import {connect} from 'react-redux';
+
 const navElement =(props)=>{
     const NavItem = styled.li`
         text-decoration:none;
@@ -9,7 +11,7 @@ const navElement =(props)=>{
         `;
     
     const NavLinkStyles = styled(NavLink)`
-        color: black;
+        color: ${props.themeColors.colorPrimar};
         font-size:0.7rem;
         font-weight:900;
         text-align: center;
@@ -22,16 +24,16 @@ const navElement =(props)=>{
         transition: all 0.4s
 
         :hover {
-            border-bottom-color:  red;
-            background-color: #e3e3e3;
+            border-bottom-color:${props.themeColors.colorPrimar};
+            background-color: ${props.themeColors.colorSecondary};
           }
         `
     return (
         <NavItem>
             <NavLinkStyles 
            activeStyle={{
-            borderBottomColor:  'red',
-            backgroundColor: '#e3e3e3'
+            borderBottomColor: props.themeColors.colorPrimar,
+            backgroundColor: props.themeColors.colorSecondary
           }}
             to={props.link}>
                 {props.children}
@@ -40,4 +42,9 @@ const navElement =(props)=>{
     );
 }
 
-export default navElement;
+const mapStateToProps = state=>{
+    return {
+      themeColors: state.themeReducer.themes[state.themeReducer.selectedTheme],
+    }
+  }
+export default connect(mapStateToProps)(navElement);
