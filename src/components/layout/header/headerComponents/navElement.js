@@ -25,7 +25,7 @@ const navElement =(props)=>{
 
         :hover {
             border-bottom-color:${props.themeColors.colorPrimar};
-            background-color: ${props.themeColors.colorSecondary};
+            background-color: ${props.themeColors.colorSecondaryTrans2};
           }
         `
     return (
@@ -33,7 +33,7 @@ const navElement =(props)=>{
             <NavLinkStyles 
            activeStyle={{
             borderBottomColor: props.themeColors.colorPrimar,
-            backgroundColor: props.themeColors.colorSecondary
+            backgroundColor: props.themeColors.colorSecondaryTrans2
           }}
             to={props.link}>
                 {props.children}
