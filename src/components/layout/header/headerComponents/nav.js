@@ -30,6 +30,7 @@ const nav =(props)=>{
                 position:fixed;
                 top:0;
                 right:0;
+                opacity: 1;
              }
      
              &:checked ~ label span {
@@ -112,7 +113,8 @@ const nav =(props)=>{
     `;
 
     const BackGround = styled.div`
-
+      opacity: 0;
+      transition: all 0.3s ease;
     `;
 
     return (
