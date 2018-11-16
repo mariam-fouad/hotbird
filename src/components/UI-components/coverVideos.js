@@ -25,23 +25,27 @@ const coverVideo = (props)=>{
                   <source src={CandolimBeachMp4} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                   <source src={CandolimBeachWebm} type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </Video>);
+          break;
         case 1: 
           video=(<Video autoPlay loop muted>
                   <source src={TwoSwimmersMp4} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                   <source src={TwoSwimmersWebm} type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </Video>);
+          break;
         
         case 2: 
           video=(<Video autoPlay loop muted>
                   <source src={PerfectHourMp4} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                   <source src={PerfectHourWebm} type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 </Video>);
+          break;
 
         case 3: 
         video=(<Video autoPlay loop muted>
                 <source src={VacayModeMp4} type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
                 <source src={VacayModeWebm} type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
               </Video>);
+        break;
     }
 
     return (

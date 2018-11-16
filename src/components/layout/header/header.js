@@ -18,7 +18,12 @@ const header =(props)=>{
         justify-content: space-between;
         align-items: center;
 
+        @media only screen and (max-width :575px){
+             
+        }
+
     `;
+
     return(
         <Header>
             <Logo/>
