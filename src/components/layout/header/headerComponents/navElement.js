@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import {connect} from 'react-redux';
 
@@ -50,15 +50,17 @@ const navElement =(props)=>{
 
 
           
-        `
+        `;
+    
     return (
         <NavItem>
             <NavLinkStyles 
            activeStyle={{
             borderBottomColor: props.themeColors.colorPrimar,
             backgroundColor: props.themeColors.colorSecondaryTrans2,
-          }}
-            to={props.link}>
+             }}
+            to={props.link}
+            exact>
                 {props.children}
             </NavLinkStyles>
         </NavItem>

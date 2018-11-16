@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import CandolimBeachMp4 from '../../assets/Candolim-Beach/Candolim-Beach.mp4';
 import CandolimBeachWebm from '../../assets/Candolim-Beach/Candolim-Beach.webm';
@@ -18,7 +18,7 @@ const coverVideo = (props)=>{
   const Video = styled.video`
       width:100%;
   `;
-    let video=<h1>Hello</h1>;
+    let video;
     switch (props.themeSelected){
         case 0: 
           video=(<Video autoPlay loop muted>
@@ -46,6 +46,7 @@ const coverVideo = (props)=>{
                 <source src={VacayModeWebm} type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
               </Video>);
         break;
+        default :video= <h1>SomeThing went wrong!</h1>
     }
 
     return (
