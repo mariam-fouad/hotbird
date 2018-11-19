@@ -21,7 +21,7 @@ const navElement =(props)=>{
         border-bottom: .1rem solid transparent;
         float: left;
         display: block;
-        transition: all 0.4s
+        transition: all 0.4s;
 
         :hover {
             border-bottom-color:${props.themeColors.colorPrimar};
