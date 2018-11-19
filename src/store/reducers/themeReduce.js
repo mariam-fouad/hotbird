@@ -26,7 +26,7 @@ const initialState = {
        }
     ],
 
-    selectedTheme:0,
+    selectedTheme:2,
   };
 
   const reducer = (state=initialState,action)=>{
