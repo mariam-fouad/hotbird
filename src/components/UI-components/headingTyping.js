@@ -20,21 +20,21 @@ const headingTyping = (props)=>{
 
     let typedHeading =[];
     for (let i=0;i<props.typing.length;i++){
-        if (i!= props.typing.length-1 ){
+        if (i!== props.typing.length-1 ){
             typedHeading.push(
-                <Typing >
+                <Typing key={i}>
                     <Typing.Speed ms={100} />
                     <span>{props.typing[i]}</span>
                     <Typing.Backspace delay={500}/>
-                    <Typing.Reset count={1} delay={2000} />
+                    <Typing.Reset count={1} delay={2500} />
                </Typing> 
             );
         }
         else{
             typedHeading.push( 
-                <Typing >
+                <Typing key={i}>
                     <Typing.Speed ms={100} />
-                    <Typing.Delay ms={2000} />
+                    <Typing.Delay ms={2500} />
                     <span>{props.typing[i]}</span>
                 </Typing> );
         }
