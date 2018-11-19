@@ -16,6 +16,7 @@ const headingTyping = (props)=>{
     left: 7rem;
     font-size: 4rem;
     padding: 0.5rem 1rem;
+    border-radius: 0.15rem;
 
     @media (max-width :655px){
         top: 6rem;
