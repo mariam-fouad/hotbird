@@ -2,17 +2,17 @@ import React from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components'
 
-import CandolimBeachMp4 from '../../assets/Candolim-Beach/Candolim-Beach.mp4';
-import CandolimBeachWebm from '../../assets/Candolim-Beach/Candolim-Beach.webm';
+import CandolimBeachMp4 from '../../../assets/Candolim-Beach/Candolim-Beach.mp4';
+import CandolimBeachWebm from '../../../assets/Candolim-Beach/Candolim-Beach.webm';
 
-import TwoSwimmersMp4 from '../../assets/Two-Swimmers/Two-Swimmers.mp4';
-import TwoSwimmersWebm from '../../assets/Two-Swimmers/Two-Swimmers.webm';
+import TwoSwimmersMp4 from '../../../assets/Two-Swimmers/Two-Swimmers.mp4';
+import TwoSwimmersWebm from '../../../assets/Two-Swimmers/Two-Swimmers.webm';
 
-import PerfectHourMp4 from '../../assets/Perfect_Hour/Perfect_Hour.mp4';
-import PerfectHourWebm from '../../assets/Perfect_Hour/Perfect_Hour.webm';
+import PerfectHourMp4 from '../../../assets/Perfect_Hour/Perfect_Hour.mp4';
+import PerfectHourWebm from '../../../assets/Perfect_Hour/Perfect_Hour.webm';
 
-import VacayModeMp4 from '../../assets/Vacay_Mode/Vacay_Mode.mp4';
-import VacayModeWebm from '../../assets/Vacay_Mode/Vacay_Mode.webm';
+import VacayModeMp4 from '../../../assets/Vacay_Mode/Vacay_Mode.mp4';
+import VacayModeWebm from '../../../assets/Vacay_Mode/Vacay_Mode.webm';
 const coverVideo = (props)=>{
 
   const Video = styled.video`
