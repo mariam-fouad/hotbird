@@ -7,7 +7,7 @@ const home = (props)=>{
     return (
         <section>
             <CoverVideo/>
-            <HeadingTyping mainHeading ="Live your " typing={["Life.","Dream!"]}/>
+            <HeadingTyping mainHeading ="Live your " typing={["Dream.","Life!"]}/>
         </section>
     );
 }
