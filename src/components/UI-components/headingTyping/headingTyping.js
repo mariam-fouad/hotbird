@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import styled from 'styled-components'
 import Typing from 'react-typing-animation';
 
+import "./headingTyping.css";
+
 const headingTyping = (props)=>{
 
     const Heading1 = styled.h1`
@@ -22,7 +24,7 @@ const headingTyping = (props)=>{
     for (let i=0;i<props.typing.length;i++){
         if (i!== props.typing.length-1 ){
             typedHeading.push(
-                <Typing key={i}>
+                <Typing key={i} className="heading-Typing">
                     <Typing.Speed ms={100} />
                     <span>{props.typing[i]}</span>
                     <Typing.Backspace delay={500}/>
@@ -32,7 +34,7 @@ const headingTyping = (props)=>{
         }
         else{
             typedHeading.push( 
-                <Typing key={i}>
+                <Typing key={i} className="heading-Typing">
                     <Typing.Speed ms={100} />
                     <Typing.Delay ms={2500} />
                     <span>{props.typing[i]}</span>
