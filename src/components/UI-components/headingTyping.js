@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components'
-
+import Typing from 'react-typing-animation';
 
 const headingTyping = (props)=>{
 
@@ -18,10 +18,32 @@ const headingTyping = (props)=>{
 
     `;
 
+    let typedHeading =[];
+    for (let i=0;i<props.typing.length;i++){
+        if (i!= props.typing.length-1 ){
+            typedHeading.push(
+                <Typing >
+                    <Typing.Speed ms={100} />
+                    <span>{props.typing[i]}</span>
+                    <Typing.Backspace delay={500}/>
+                    <Typing.Reset count={1} delay={2000} />
+               </Typing> 
+            );
+        }
+        else{
+            typedHeading.push( 
+                <Typing >
+                    <Typing.Speed ms={100} />
+                    <Typing.Delay ms={2000} />
+                    <span>{props.typing[i]}</span>
+                </Typing> );
+        }
+    }
+
     return (
         <Heading1>
-        {props.mainHeading}
-        <span>{props.typing[0]}</span>
+                <span>{props.mainHeading}</span>
+                {typedHeading}
         </Heading1>
         
     );
