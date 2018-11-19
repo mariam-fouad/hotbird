@@ -21,7 +21,7 @@ const headingTyping = (props)=>{
     transition: all 0.4s;
 
     :hover{
-        text-shadow: 2px 2px 4px ${props.themeColors.colorSecondary};
+        text-shadow: 6px 2px 4px ${props.themeColors.colorSecondary};
     }
 
     @media (max-width :655px){
