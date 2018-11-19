@@ -12,11 +12,35 @@ const headingTyping = (props)=>{
     color:${props.themeColors.colorPrimar};
     display: inline-block;
     position: absolute;
-    top: 5rem;
+    top: 9rem;
     left: 7rem;
-    font-size: 2rem;
+    font-size: 4rem;
     padding: 0.5rem 1rem;
-}
+
+    @media (max-width :655px){
+        top: 6rem;
+        left: 5rem;
+        font-size: 3.5rem;
+    }
+
+    @media (max-width :515px){
+        top: 5rem;
+        left: 3rem;
+        font-size: 2.5rem;
+    }
+
+    @media (max-width :404px){
+        top: 5rem;
+        left: 2.5rem;
+        font-size: 2rem;
+    }
+
+    @media (max-width :325px){
+        top: 4rem;
+        left: 2rem;
+        font-size: 1.5rem;
+    }
+    
 
     `;
 
@@ -25,10 +49,11 @@ const headingTyping = (props)=>{
         if (i!== props.typing.length-1 ){
             typedHeading.push(
                 <Typing key={i} className="heading-Typing">
+                    <Typing.Delay ms={700} />
                     <Typing.Speed ms={100} />
                     <span>{props.typing[i]}</span>
                     <Typing.Backspace delay={500}/>
-                    <Typing.Reset count={1} delay={2500} />
+                    <Typing.Reset count={1} delay={3000} />
                </Typing> 
             );
         }
@@ -36,7 +61,7 @@ const headingTyping = (props)=>{
             typedHeading.push( 
                 <Typing key={i} className="heading-Typing">
                     <Typing.Speed ms={100} />
-                    <Typing.Delay ms={2500} />
+                    <Typing.Delay ms={3000} />
                     <span>{props.typing[i]}</span>
                 </Typing> );
         }
