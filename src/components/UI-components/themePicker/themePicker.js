@@ -9,6 +9,11 @@ const themePicker = (props)=>{
         height: 7rem;
         display: inline-block;
         margin: 0.25rem;
+        transition: all 0.3s;
+
+        :hover{
+            transform:scale(1.15);
+        }
     `;
 
     const TopLeftQ = styled(QuarterCircle)`
