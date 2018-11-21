@@ -11,7 +11,7 @@ const navElement =(props)=>{
         `;
     
     const NavLinkStyles = styled(NavLink)`
-        color: ${props.themeColors.colorPrimar};
+        color: ${props.themeColors.colorPrimary};
         font-size:0.7rem;
         font-weight:900;
         text-align: center;
@@ -24,7 +24,7 @@ const navElement =(props)=>{
         transition: all 0.4s;
 
         :hover {
-            border-bottom-color:${props.themeColors.colorPrimar};
+            border-bottom-color:${props.themeColors.colorPrimary};
             background-color: ${props.themeColors.colorSecondaryTrans2};
           }
           
@@ -56,7 +56,7 @@ const navElement =(props)=>{
         <NavItem>
             <NavLinkStyles 
            activeStyle={{
-            borderBottomColor: props.themeColors.colorPrimar,
+            borderBottomColor: props.themeColors.colorPrimary,
             backgroundColor: props.themeColors.colorSecondaryTrans2,
              }}
             to={props.link}

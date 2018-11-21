@@ -10,7 +10,7 @@ const theme = (props)=>{
         margin-top: 5rem;
     `;
     const H1 = styled.h1`
-        color: ${props.themeColors.colorPrimar};
+        color: ${props.themeColors.colorPrimary};
     `;
     return (
         <Main>

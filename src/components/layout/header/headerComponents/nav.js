@@ -23,7 +23,7 @@ const nav =(props)=>{
         @media (max-width:575px){
             &:checked ~ div {
                 z-index:150;
-                background-color: ${props.themeColors.colorPrimar};
+                background-color: ${props.themeColors.colorPrimary};
                 width:60vw;
                 height:100vh;
                 display:inline-block;
@@ -61,7 +61,7 @@ const nav =(props)=>{
     const Label =styled.label`
     @media (max-width:575px){
         z-index:200;
-        background-color: ${props.themeColors.colorPrimar};
+        background-color: ${props.themeColors.colorPrimary};
         width: 2.5rem;
         height: 2.5rem;
         border-radius: .3rem;

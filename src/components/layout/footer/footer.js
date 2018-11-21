@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 const footer = (props)=>{
     const Footer = styled.footer`
-        background-color: ${props.themeColors.colorPrimar};
+        background-color: ${props.themeColors.colorPrimary};
         color:${props.themeColors.colorSecondary};
         padding: 1rem 3rem;
 

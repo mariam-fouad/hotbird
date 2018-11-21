@@ -7,7 +7,7 @@ import HeadingTyping from '../components/UI-components/headingTyping/headingTypi
 
 const home = (props)=>{
     const Section = styled.section`
-        background-color: ${props.themeColors.colorPrimar};
+        background-color: ${props.themeColors.colorPrimary};
     `;
     return (
         <Section>
