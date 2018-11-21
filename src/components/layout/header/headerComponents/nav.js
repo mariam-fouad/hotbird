@@ -127,7 +127,7 @@ const nav =(props)=>{
                 <NavElement link="/hotels-activities">Hotels activities</NavElement>
                 <NavElement link="/ratings">You're Rating</NavElement>
                 <NavElement link="/wishlist">You're Wishlist</NavElement>
-                <NavElement link="/Theme">Theme</NavElement>
+                <NavElement link="/theme">Theme</NavElement>
             </List>
         </Nav>
     );

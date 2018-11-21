@@ -13,7 +13,7 @@ class App extends Component {
 
     let routeSwitch= (
       <Switch>
-        <Route  path="/thems" component={Themes}/>
+        <Route  path="/theme" component={Themes}/>
         <Route exact path="/" component={Home}/>
         <Redirect to='/'/>
       </Switch>
