@@ -9,3 +9,5 @@ const themes = (props)=>{
         </main>
     )
 }
+
+export default themes;
