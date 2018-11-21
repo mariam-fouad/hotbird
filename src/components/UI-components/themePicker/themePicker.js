@@ -4,40 +4,32 @@ import {connect} from 'react-redux';
 
 const themePicker = (props)=>{
 
-    const TopLeftQ = styled.div`
+    const QuarterCircle = styled.div`
         width: 7rem;
         height: 7rem;
+        display: inline-block;
+        margin: 0.25rem;
+    `;
+
+    const TopLeftQ = styled(QuarterCircle)`
+        
         background: ${props.themeColors[0].colorPrimary};
         border-radius: 7rem 0 0 0;
-        display: inline-block;
-        margin: 0.25rem;
         border: 0.3rem solid ${props.themeColors[0].colorSecondary};
     `;
-    const TopRightQ = styled.div`
-        width: 7rem;
-        height: 7rem;
+    const TopRightQ = styled(QuarterCircle)`
         background: ${props.themeColors[1].colorPrimary};
         border-radius: 0 7rem 0 0;
-        display: inline-block;
-        margin: 0.25rem;
         border: 0.3rem solid ${props.themeColors[1].colorSecondary};
     `;
-    const BottomLeftQ = styled.div`
-        width: 7rem;
-        height: 7rem;
+    const BottomLeftQ = styled(QuarterCircle)`
         background: ${props.themeColors[2].colorPrimary};
         border-radius: 0 0 0 7rem;
-        display: inline-block;
-        margin: 0.25rem;
         border: 0.3rem solid ${props.themeColors[2].colorSecondary};
     `;
-    const BottomRightQ = styled.div`
-        width: 7rem;
-        height: 7rem;
+    const BottomRightQ = styled(QuarterCircle)`
         background: ${props.themeColors[3].colorPrimary};
         border-radius: 0 0 7rem 0;
-        display: inline-block;
-        margin: 0.25rem;
         border: 0.3rem solid ${props.themeColors[3].colorSecondary};
     `;
     return (
