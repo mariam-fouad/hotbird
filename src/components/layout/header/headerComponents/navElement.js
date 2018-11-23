@@ -17,7 +17,7 @@ const navElement =(props)=>{
         text-align: center;
         text-decoration: none;
         padding: 1rem;
-        padding-bottom: 1.25rem;
+        padding-bottom: 1.10rem;
         border-bottom: .1rem solid transparent;
         float: left;
         display: block;
