@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
+import * as actions from '../../../store/actions';
+
 
 const themePicker = (props)=>{
 
@@ -40,12 +42,12 @@ const themePicker = (props)=>{
     return (
         <div>
             <div>
-                <TopLeftQ/>
-                <TopRightQ/>
+                <TopLeftQ onClick={()=>props.onSelectTheme(0)}/>
+                <TopRightQ onClick={()=>props.onSelectTheme(1)}/>
             </div>
             <div>
-                <BottomLeftQ/>
-                <BottomRightQ/>
+                <BottomLeftQ onClick={()=>props.onSelectTheme(2)}/>
+                <BottomRightQ onClick={()=>props.onSelectTheme(3)}/>
             </div>
         </div>
     );
@@ -56,4 +58,9 @@ const mapStateToProps = state=>{
         themeColors: state.themeReducer.themes,
     }
   }
-export default connect(mapStateToProps)(themePicker);
+const mapDispatchToProps=dispatch=>{
+    return {
+        onSelectTheme : (themeIndex)=> dispatch (actions.selectTheme(themeIndex)),
+    }
+  }
+export default connect(mapStateToProps,mapDispatchToProps)(themePicker);
