@@ -12,6 +12,7 @@ const themePicker = (props)=>{
         display: inline-block;
         margin: 0.25rem;
         transition: all 0.3s;
+        cursor: pointer;
 
         :hover{
             transform:scale(1.15);
