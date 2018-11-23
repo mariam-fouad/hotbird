@@ -1,1 +1,1 @@
-const SELECT_THEME = "SELECT_THEME";
+export const SELECT_THEME = "SELECT_THEME";

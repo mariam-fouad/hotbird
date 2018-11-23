@@ -1,3 +1,4 @@
+import * as actionTypes from '../actions/actionTypes';
 const initialState = {
    themes:[
        {
@@ -29,8 +30,15 @@ const initialState = {
     selectedTheme:3,
   };
 
+  const changeSelectedTheme = (state , themeIndex)=>{
+      return {
+          ...state,
+          selectedTheme:themeIndex
+      }
+  }
   const reducer = (state=initialState,action)=>{
     switch (action.type) {
+        case actionTypes.SELECT_THEME: return changeSelectedTheme(state, action.selectTheme);
         default:return state;
     }
   }
