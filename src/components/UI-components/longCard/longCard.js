@@ -21,13 +21,17 @@ const LongCard = (props)=>{
     const CardMain = styled.p`
     `;
 
+    const CardDetails = styled.div`
+        width:100%;
+    `;
+
     return (
         <CardDiv>
             <Slider imagesURL= {props.imagesURL}/>
-            <div>
+            <CardDetails>
                 <CardName>{props.name}</CardName>
                 <CardMain>{props.main}</CardMain>
-            </div>
+            </CardDetails>
         </CardDiv>
     );
 }
