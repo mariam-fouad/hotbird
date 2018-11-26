@@ -19,7 +19,8 @@ const hotels = (props)=>{
 
     let longCards = props.hotels.map(hotel=>{
         return (
-            <LongCard 
+            <LongCard
+            key={hotel.id}
             name={hotel.name} 
             main={hotel.location}
             themeColors={props.themeColors}>
