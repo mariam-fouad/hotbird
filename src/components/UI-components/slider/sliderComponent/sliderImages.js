@@ -9,9 +9,7 @@ const sliderImages = (props)=>{
     `;
     return (
         <React.Fragment>
-            <Images src={require('../../../../assets'+props.imagesURL+'/1.jpg')}/>
-            <Images src={require('../../../../assets'+props.imagesURL+'/2.jpg')}/>
-            <Images src={require('../../../../assets'+props.imagesURL+'/3.jpg')}/>
+            <Images src={require('../../../../assets'+props.imagesURL)}/>
         </React.Fragment>
         
     );
