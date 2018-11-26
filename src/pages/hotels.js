@@ -23,6 +23,7 @@ const hotels = (props)=>{
             key={hotel.id}
             name={hotel.name} 
             main={hotel.location}
+            imagesURL = {hotel.imagesFolder}
             themeColors={props.themeColors}>
             </LongCard>
         );

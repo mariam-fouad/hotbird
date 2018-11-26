@@ -23,7 +23,7 @@ const LongCard = (props)=>{
 
     return (
         <CardDiv>
-            <Slider/>
+            <Slider imagesURL= {props.imagesURL}/>
             <div>
                 <CardName>{props.name}</CardName>
                 <CardMain>{props.main}</CardMain>

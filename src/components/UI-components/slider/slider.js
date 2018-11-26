@@ -6,7 +6,7 @@ const slider = (props)=>{
     return (
         <div>
             <p>Slider.</p>
-            <SliderImages/>
+            <SliderImages imagesURL={props.imagesURL}/>
         </div>
         
     );
