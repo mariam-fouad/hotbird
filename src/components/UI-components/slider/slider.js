@@ -1,15 +1,23 @@
-import React from 'react';
+import React ,{Component} from 'react';
 
 import SliderImages from './sliderComponent/sliderImages';
-const slider = (props)=>{
 
-    return (
-        <div>
-            <p>Slider.</p>
-            <SliderImages imagesURL={props.imagesURL}/>
-        </div>
-        
-    );
+class Slider extends Component {
+
+    state ={
+        slideIndex:0,
+    }
+    
+    render() {
+        return (
+            <div>
+                <SliderImages imagesURL={props.imagesURL}/>
+            </div>
+            
+        );
+    }
+
+    
 }
 
-export default slider;
+export default Slider;
