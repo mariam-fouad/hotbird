@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+import Slider from '../slider/slider';
 
 const LongCard = (props)=>{
     const CardDiv = styled.div`
@@ -21,9 +23,7 @@ const LongCard = (props)=>{
 
     return (
         <CardDiv>
-            <div>
-                Slide
-            </div>
+            <Slider/>
             <div>
                 <CardName>{props.name}</CardName>
                 <CardMain>{props.main}</CardMain>
