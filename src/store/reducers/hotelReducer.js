@@ -31,7 +31,7 @@ const initialState = {
             name:"Taj-in",
             location:"taj mahalm, india",
             rate:7.9,
-            imagesFolder:"/jajin",
+            imagesFolder:"/tajin",
             services:["wifi","parking","airport shuttle"],
         },
         {
