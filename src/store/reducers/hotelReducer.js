@@ -50,14 +50,6 @@ const initialState = {
             imagesFolder:"/mountainhouse",
             services:["wifi","lake-view","mountain-view"],
         },
-        {
-            id:6,
-            name:"Mountain House",
-            location:"British columbia, Canada",
-            rate:7.8,
-            imagesFolder:"/mountainhouse",
-            services:["wifi","lake-view","mountain-view"],
-        },
     ],
   };
 
