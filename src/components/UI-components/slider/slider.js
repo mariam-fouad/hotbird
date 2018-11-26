@@ -1,9 +1,14 @@
 import React from 'react';
 
+import SliderImages from './sliderComponent/sliderImages';
 const slider = (props)=>{
 
     return (
-        <p>Slider.</p>
+        <div>
+            <p>Slider.</p>
+            <SliderImages/>
+        </div>
+        
     );
 }
 
