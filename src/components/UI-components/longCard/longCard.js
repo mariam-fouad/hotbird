@@ -22,6 +22,12 @@ const LongCard = (props)=>{
             box-shadow: 2px 6px 4px #ccc;
         
         }
+
+        @media only screen and (max-width :360px){
+            width: 15rem;
+        }
+
+        
 }
     `;
     const CardName = styled.h2`
