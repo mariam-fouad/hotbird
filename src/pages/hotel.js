@@ -1,7 +1,8 @@
 import React ,{Component} from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
-import { throws } from 'assert';
+
+import Slider from '../components/UI-components/slider/slider';
 
 class hotel extends Component{
 
@@ -21,10 +22,18 @@ class hotel extends Component{
         });
     }
     render(){
+        const Main = styled.main`
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        `;
         return (
-            <h1>
-                Hotel {this.state.hotel.name}
-            </h1>
+            <Main>
+                <Slider imagesURL={this.state.hotel.imagesFolder}/>
+                <h1>
+                    Hotel {this.state.hotel.name}
+                </h1>
+            </Main>
+            
         );
     }
     
