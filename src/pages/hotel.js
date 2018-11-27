@@ -4,10 +4,18 @@ import {connect} from 'react-redux';
 
 class hotel extends Component{
 
+    state={
+        id:null,
+    }
+
+    componentWillMount() {
+        const hotelID = this.props.match.params.id;
+        this.setState({id:hotelID});
+    }
     render(){
         return (
             <h1>
-                Hotel
+                Hotel {this.state.id}
             </h1>
         );
     }
