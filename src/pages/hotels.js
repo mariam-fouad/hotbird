@@ -6,7 +6,7 @@ import LongCard from '../components/UI-components/longCard/longCard';
 
 const hotels = (props)=>{
     const Main = styled.main`
-        margin-top: 5rem;
+        margin-top: 3rem;
         margin-bottom: 2rem;
         display:flex;
         display: flex;
@@ -31,7 +31,7 @@ const hotels = (props)=>{
 
     return (
         <Main>
-            <H1>Hotels page</H1>
+            <H1>Explore Our Hotels</H1>
             {longCards}
         </Main>
         
