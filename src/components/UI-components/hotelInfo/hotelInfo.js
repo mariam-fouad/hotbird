@@ -57,6 +57,11 @@ const hotelInfo = (props)=>{
     const HotelInfoDiv = styled.div`
     `;
 
+    const Services = styled.div`
+        color:${props.themeColors.colorPrimary};
+        font-weight: 650;
+    `;
+
     let iconsList = props.hotel.services.map(service=>
         {
             return(
@@ -78,9 +83,9 @@ const hotelInfo = (props)=>{
                     <Rating>{props.hotel.rate}</Rating>
                 </SubInfo>           
             </HotelInfo>
-            <div>
-                {iconsList}
-            </div> 
+            <Services>
+                Services:{iconsList}
+            </Services> 
             <Line/> 
         </HotelInfoDiv>
         
