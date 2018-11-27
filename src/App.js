@@ -17,7 +17,7 @@ class App extends Component {
       <Switch>
         <Route  path="/theme" component={Themes}/>
         <Route exact path="/hotels" component={Hotels}/>
-        <Route  path="/hotel" component={Hotel}/>
+        <Route  path="/hotel/:id" component={Hotel}/>
         <Route exact path="/" component={Home}/>
         <Redirect to='/'/>
       </Switch>

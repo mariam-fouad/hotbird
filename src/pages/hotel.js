@@ -1,13 +1,17 @@
-import React from 'react';
+import React ,{Component} from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
 
-const hotel = (props)=>{
-    return (
-        <h1>
-            Hotel
-        </h1>
-    );
+class hotel extends Component{
+
+    render(){
+        return (
+            <h1>
+                Hotel
+            </h1>
+        );
+    }
+    
 }
 
 const mapStateToProps = state=>{
