@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {connect} from 'react-redux';
 
 import Slider from '../components/UI-components/slider/slider';
+import HotelInfo from '../components/UI-components/hotelInfo/hotelInfo';
 
 class hotel extends Component{
 
@@ -26,35 +27,11 @@ class hotel extends Component{
             height:30rem;
             margin-bottom: 2rem;
         `;
-        const H1 = styled.h1`
-            color:${this.props.themeColors.colorPrimary};
-            border-bottom: 1px solid transparent;
-            display: inline-block;
-            font-size: 1rem;
-            padding-bottom: .3rem; 
-            transition: all 0.5s;
 
-            :hover{
-                border-bottom: 1px solid ${this.props.themeColors.colorSecondary};
-                font-size: 1rem;
-            }
-        `;
-
-        const HotelInfo = styled.div`
-            display:flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: .5rem;
-        `;
         return (
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
-                <HotelInfo>
-                    <H1>
-                        Hotel {this.state.hotel.name}
-                    </H1>
-                    <p>{this.state.hotel.location}</p>
-                </HotelInfo>
+                <HotelInfo hotel ={this.state.hotel} themeColors={this.props.themeColors}/>
                 
             </Main>
             
