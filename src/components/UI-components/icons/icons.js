@@ -1,48 +1,72 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faWifi,
+    faTree,
+    faUtensils,
+    faParking,
+    faDumbbell,
+    faUmbrellaBeach,
+    faPlaneArrival,
+    faSwimmingPool,
+    faSnowflake,
+    faMountain,
+    faShower,
+    faBath
+
+} from '@fortawesome/free-solid-svg-icons';
 const icons = (props)=>{
-    let icon ;
-    switch (props.name){
+
+    const StyleIcon = styled(FontAwesomeIcon)`
+        color:${props.color};
+        padding: 0 4px;
+    `;
+    let iconService ;
+    switch (props.service){
         case "wifi":
-            icon = <FontAwesomeIcon icon="wifi" />;
+            iconService = (<StyleIcon icon={faWifi} />);
             break;
         case "forest-view":
-            icon = <FontAwesomeIcon icon="tree" />;
+            iconService = (<StyleIcon icon={faTree} />);
             break;
         case "breakfast":
-            icon = <FontAwesomeIcon icon="utensils" />;
+            iconService = (<StyleIcon icon={faUtensils} />);
             break;
         case "parking":
-            icon = <FontAwesomeIcon icon="parking" />;
+            iconService = (<StyleIcon icon={faParking} />);
             break;
         case "gym":
-            icon = <FontAwesomeIcon icon="dumbbell" />;
+            iconService = (<StyleIcon icon={faDumbbell} />);
             break;
         case "sea-view":
-            icon = <FontAwesomeIcon icon="umbrella-beach" />;
+            iconService = (<StyleIcon icon={faUmbrellaBeach} />);
             break;
         case "airport shuttle":
-            icon = <FontAwesomeIcon icon="plane-arrival" />;
+            iconService = (<StyleIcon icon={faPlaneArrival} />);
             break;
         case "private pool":
-            icon = <FontAwesomeIcon icon="swimming-pool" />;
+            iconService = (<StyleIcon icon={faSwimmingPool} />);
             break;
         case "snow":
-            icon = <FontAwesomeIcon icon="snowflake" />;
+            iconService = (<StyleIcon icon={faSnowflake} />);
             break;
         case "mountain-view":
-            icon = <FontAwesomeIcon icon="mountain" />;
+            iconService = (<StyleIcon icon={faMountain} />);
             break;
         case "bath":
-            icon = <FontAwesomeIcon icon="bath" />;
+            iconService = (<StyleIcon icon={faBath} />);
             break;
         case "shower":
-            icon = <FontAwesomeIcon icon="shower" />;
+            iconService = (<StyleIcon icon={faShower} />);
             break;
+        default:
+            iconService= <p>Error</p>
     }
 
     return (
-        {icon}
+        iconService
     );
 }
 

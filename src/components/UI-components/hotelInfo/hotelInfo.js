@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Icons from '../icons/icons';
 const hotelInfo = (props)=>{
         const H1 = styled.h1`
         color:${props.themeColors.colorPrimary};
@@ -56,7 +57,13 @@ const hotelInfo = (props)=>{
     const HotelInfoDiv = styled.div`
     `;
 
-
+    let iconsList = props.hotel.services.map(service=>
+        {
+            return(
+                <Icons key={service} service={service} color={props.themeColors.colorSecondary}/>
+            );
+        }    
+    );
     return (
         <HotelInfoDiv>
             <HotelInfo>
@@ -68,7 +75,7 @@ const hotelInfo = (props)=>{
                     <Rating>{props.hotel.rate}</Rating>
                 </SubInfo>           
             </HotelInfo>
-            
+            {iconsList}
             <Line/> 
         </HotelInfoDiv>
         
