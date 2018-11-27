@@ -14,7 +14,8 @@ import {
     faSnowflake,
     faMountain,
     faShower,
-    faBath
+    faBath,
+    faMapMarkerAlt,
 
 } from '@fortawesome/free-solid-svg-icons';
 const icons = (props)=>{
@@ -65,6 +66,9 @@ const icons = (props)=>{
             break;
         case "shower":
             iconService = (<StyleIcon icon={faShower} />);
+            break;
+        case "location":
+            iconService = (<StyleIcon icon={faMapMarkerAlt} />);
             break;
         default:
             iconService= <p>Error</p>

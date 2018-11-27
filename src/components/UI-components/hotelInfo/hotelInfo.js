@@ -79,7 +79,13 @@ const hotelInfo = (props)=>{
                     {props.hotel.name}
                 </H1>
                 <SubInfo>
-                    <Location>{props.hotel.location}</Location>
+                    <Location>
+                        <Icons 
+                        service={"location"} 
+                        color={props.themeColors.colorPrimary}
+                        hoverColor = {props.themeColors.colorSecondary}/>
+                        {props.hotel.location}
+                    </Location>
                     <Rating>{props.hotel.rate}</Rating>
                 </SubInfo>           
             </HotelInfo>
