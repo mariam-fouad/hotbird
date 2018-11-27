@@ -60,7 +60,10 @@ const hotelInfo = (props)=>{
     let iconsList = props.hotel.services.map(service=>
         {
             return(
-                <Icons key={service} service={service} color={props.themeColors.colorSecondary}/>
+                <Icons key={service} 
+                service={service} 
+                color={props.themeColors.colorPrimary}
+                hoverColor = {props.themeColors.colorSecondary}/>
             );
         }    
     );

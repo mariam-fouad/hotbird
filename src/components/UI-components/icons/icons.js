@@ -21,7 +21,12 @@ const icons = (props)=>{
 
     const StyleIcon = styled(FontAwesomeIcon)`
         color:${props.color};
-        padding: 0 4px;
+        padding: 0 7px;
+        transform: scale(1.3);
+
+        :hover{
+            color:${props.hoverColor};
+        }
     `;
     let iconService ;
     switch (props.service){
