@@ -20,6 +20,7 @@ const LongCard = (props)=>{
         :hover{
             transform:scale(1.1) translateY(-.1rem);
             box-shadow: 2px 6px 4px #ccc;
+            cursor: pointer;
         
         }
 
@@ -47,7 +48,7 @@ const LongCard = (props)=>{
     return (
         <CardDiv>
             
-            <CardDetails>
+            <CardDetails onClick = {props.clicked}>
                 <CardName>{props.name}</CardName>
                 <CardMain>{props.main}</CardMain>
             </CardDetails>

@@ -4,7 +4,12 @@ import {connect} from 'react-redux';
 
 import LongCard from '../components/UI-components/longCard/longCard';
 
+
 const hotels = (props)=>{
+    const redirectToHotel =(hotelID)=>{
+        props.history.push('/hotel/'+hotelID);
+    }
+
     const Main = styled.main`
         margin-top: 3rem;
         margin-bottom: 2rem;
@@ -24,7 +29,9 @@ const hotels = (props)=>{
             name={hotel.name} 
             main={hotel.location}
             imagesURL = {hotel.imagesFolder}
-            themeColors={props.themeColors}>
+            themeColors={props.themeColors}
+            clicked = {()=>redirectToHotel(hotel.id)}>
+            
             </LongCard>
         );
     })
