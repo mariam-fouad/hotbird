@@ -7,6 +7,7 @@ import Header from './components/layout/header/header';
 import Home from './pages/home';
 import Themes from './pages/theme';
 import Hotels from './pages/hotels';
+import Hotel from './pages/hotel';
 import Footer from './components/layout/footer/footer';
 
 class App extends Component {
@@ -15,7 +16,8 @@ class App extends Component {
     let routeSwitch= (
       <Switch>
         <Route  path="/theme" component={Themes}/>
-        <Route  path="/hotels" component={Hotels}/>
+        <Route exact path="/hotels" component={Hotels}/>
+        <Route  path="/hotel" component={Hotel}/>
         <Route exact path="/" component={Home}/>
         <Redirect to='/'/>
       </Switch>
