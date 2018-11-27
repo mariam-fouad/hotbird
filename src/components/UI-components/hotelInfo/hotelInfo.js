@@ -1,4 +1,4 @@
-import React ,{Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const hotelInfo = (props)=>{
@@ -55,6 +55,7 @@ const hotelInfo = (props)=>{
 
     const HotelInfoDiv = styled.div`
     `;
+
 
     return (
         <HotelInfoDiv>
