@@ -1,21 +1,29 @@
 import React ,{Component} from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
+import { throws } from 'assert';
 
 class hotel extends Component{
 
     state={
         id:null,
+        hotel:null,
     }
 
+    getHotelInfo = (id)=>{
+       return this.props.hotels[id];
+    }
     componentWillMount() {
         const hotelID = this.props.match.params.id;
-        this.setState({id:hotelID});
+        this.setState({
+            id:hotelID,
+            hotel:this.getHotelInfo(hotelID),
+        });
     }
     render(){
         return (
             <h1>
-                Hotel {this.state.id}
+                Hotel {this.state.hotel.name}
             </h1>
         );
     }
