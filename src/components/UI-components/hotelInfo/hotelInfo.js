@@ -68,7 +68,7 @@ const hotelInfo = (props)=>{
         <HotelInfoDiv>
             <HotelInfo>
                 <H1>
-                    Hotel {props.hotel.name}
+                    {props.hotel.name}
                 </H1>
                 <SubInfo>
                     <Location>{props.hotel.location}</Location>
