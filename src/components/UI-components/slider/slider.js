@@ -1,5 +1,5 @@
 import React ,{Component} from 'react';
-
+import styled from 'styled-components';
 
 import SliderImages from './sliderComponent/sliderImages';
 
@@ -22,7 +22,7 @@ class Slider extends Component {
     componentDidMount() {
         this.interval = setInterval(
             () => this.updateIndenx()
-            , 3000);
+            , 5000);
       }
 
       componentWillUnmount() {
@@ -30,20 +30,15 @@ class Slider extends Component {
       }
 
     render() {
-        let imgName;
-        if (this.state.slideIndex===0){
-            imgName='/1.jpg';
-        }
-        else if (this.state.slideIndex===1){
-            imgName='/2.jpg';
-        }
-        else{
-            imgName='/3.jpg';
-        }
+        const Div = styled.div`
+            position: relative;
+            height: 20rem;
+            overflow: hidden;
+        `;
         return (
-            <div>
-                <SliderImages imagesURL={this.props.imagesURL+imgName}/>
-            </div>
+            <Div>
+                <SliderImages imagesURL={this.props.imagesURL} index={this.state.slideIndex}/>
+            </Div>
             
         );
     }

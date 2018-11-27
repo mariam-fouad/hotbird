@@ -23,7 +23,7 @@ class hotel extends Component{
     }
     render(){
         const Main = styled.main`
-            margin-top: 3rem;
+            height:30rem;
             margin-bottom: 2rem;
         `;
         return (
