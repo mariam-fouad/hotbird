@@ -49,7 +49,7 @@ const hotelInfo = (props)=>{
         height: 1.5px;
         border: 0;
         border-top: 1px ridge ${props.themeColors.colorSecondary};
-        margin: 3px 0;
+        margin: 12px 0;
         padding: 0;
         width:80vw;
     `;
@@ -75,7 +75,9 @@ const hotelInfo = (props)=>{
                     <Rating>{props.hotel.rate}</Rating>
                 </SubInfo>           
             </HotelInfo>
-            {iconsList}
+            <div>
+                {iconsList}
+            </div> 
             <Line/> 
         </HotelInfoDiv>
         
