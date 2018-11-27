@@ -27,7 +27,7 @@ const initialState = {
        }
     ],
 
-    selectedTheme:3,
+    selectedTheme:0,
   };
 
   const changeSelectedTheme = (state , themeIndex)=>{
