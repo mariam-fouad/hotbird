@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
 
+import WishCard from '../components/UI-components/wishCard/wishCard';
+
 const wishList = (props)=>{
 
     const Main = styled.main`
@@ -13,7 +15,7 @@ const wishList = (props)=>{
     align-items: center;
 `;
     const wishList = props.wish.map(hotel=>
-        <p>{hotel.hotelName}</p>);
+        <WishCard themeColors={props.themeColors} hotel={hotel}/>);
     return (
         <Main>
             {wishList}
