@@ -13,6 +13,7 @@ const wishList = (props)=>{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height:65vh;
 `;
     const wishList = props.wish.map(hotel=>
         <WishCard themeColors={props.themeColors} hotel={hotel}/>);
