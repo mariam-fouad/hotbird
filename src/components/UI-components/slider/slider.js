@@ -34,6 +34,14 @@ class Slider extends Component {
             position: relative;
             height: 20rem;
             overflow: hidden;
+
+            @media (max-width: 450px){
+                height: 15rem;
+            }
+
+            @media (max-width: 350px){
+                height: 13rem;
+            }
         `;
         return (
             <Div>
