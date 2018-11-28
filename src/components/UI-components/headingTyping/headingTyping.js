@@ -9,7 +9,7 @@ const headingTyping = (props)=>{
 
     const Heading1 = styled.h1`
     background-color:#ffffffa3;
-    color:${props.themeColors.colorPrimar};
+    color:${props.themeColors.colorPrimary};
     display: inline-block;
     position: absolute;
     top: 9rem;
@@ -76,7 +76,7 @@ const headingTyping = (props)=>{
 
     return (
         <Heading1>
-            <Typing loop>
+            <Typing loop style={{color:props.themeColors.colorPrimary}}>
             <Typing.Speed ms={150} />
             <span>{props.mainHeading}</span>
                 {typedHeading}
