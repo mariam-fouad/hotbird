@@ -11,6 +11,7 @@ import Home from './pages/home';
 import Themes from './pages/theme';
 import Hotels from './pages/hotels';
 import Hotel from './pages/hotel';
+import WishList from './pages/wishList';
 import Footer from './components/layout/footer/footer';
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
         <Route  path="/theme" component={Themes}/>
         <Route exact path="/hotels" component={Hotels}/>
         <Route  path="/hotel/:id" component={Hotel}/>
+        <Route  path="/wishlist" component={WishList}/>
         <Route exact path="/" component={Home}/>
         <Redirect to='/'/>
       </Switch>
