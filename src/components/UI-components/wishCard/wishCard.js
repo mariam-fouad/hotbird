@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import Icons from '../icons/icons';
 
@@ -14,11 +15,24 @@ const wishCard = (props)=>{
 
     const Heart = styled.div`
         background-color : ${props.themeColors.colorSecondaryTrans};
-        padding:2px;
+        padding:3px;
     `;
 
     const Hotel = styled.div`
         width:100%;
+    `;
+
+    const LinkStyled = styled(Link)`
+        color:${props.themeColors.colorPrimary};
+        text-decoration: none;
+        padding-bottom:1px;
+        border-bottom: 1px solid transparent;
+        transition: all 0.3s;
+
+        :hover{
+            border-bottom: 1px solid ${props.themeColors.colorSecondary};
+        }
+
     `;
     return (
         <WishCard>
@@ -30,7 +44,7 @@ const wishCard = (props)=>{
             </Heart>
             
             <Hotel>
-                {props.hotel.hotelName}
+                <LinkStyled to={"hotel/"+props.hotel.id}>{props.hotel.hotelName}</LinkStyled>
             </Hotel>
         </WishCard>
     );
