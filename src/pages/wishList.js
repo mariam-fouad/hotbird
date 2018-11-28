@@ -7,7 +7,7 @@ import WishCard from '../components/UI-components/wishCard/wishCard';
 const wishList = (props)=>{
 
     const Main = styled.main`
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     display:flex;
     display: flex;
