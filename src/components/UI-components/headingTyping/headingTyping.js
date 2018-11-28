@@ -76,7 +76,7 @@ const headingTyping = (props)=>{
 
     return (
         <Heading1>
-            <Typing loop style={{color:props.themeColors.colorPrimary}}>
+            <Typing loop>
             <Typing.Speed ms={150} />
             <span>{props.mainHeading}</span>
                 {typedHeading}
