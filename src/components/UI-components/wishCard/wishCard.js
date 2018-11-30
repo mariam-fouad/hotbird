@@ -10,7 +10,11 @@ const wishCard = (props)=>{
         border: 1px solid ${props.themeColors.colorPrimary};
         margin : 3px;
         display:flex;
-        justify-content: space-between;;
+        justify-content: space-between;
+
+        @media (max-width:420px){
+            width:60vw;
+        }
     `;
 
     const Heart = styled.div`
