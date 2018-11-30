@@ -16,7 +16,7 @@ const wishList = (props)=>{
     height:65vh;
 `;
     const wishList = props.wish.map(hotel=>
-        <WishCard themeColors={props.themeColors} hotel={hotel}/>);
+        <WishCard key={hotel.id} themeColors={props.themeColors} hotel={hotel}/>);
     return (
         <Main>
             {wishList}
