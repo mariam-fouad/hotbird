@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Backdrop from '../Backdrop/Backdrop';
+import Icon from '../icons/icons';
 
 const popupMessage = (props)=>{
 
@@ -15,13 +16,23 @@ const popupMessage = (props)=>{
         z-index:1000;
         transform: translate(-50%,-50%);
     `;
+    const CloseSpan = styled.span`
+        cursor: pointer;
+    `;
 
+    
 
     return (
         <div>
             <Backdrop close ={props.close}/>
-            <MessageBox onClick = {props.close}>
+            <MessageBox>
                 {props.children+ "is successfully removed from the wishList !"}
+                <CloseSpan  onClick = {props.close}>
+                    <Icon 
+                    service="times" 
+                    color= {props.themeColors.colorPrimary}
+                    hoverColor={props.themeColors.colorPrimary}/> 
+                </CloseSpan>
             </MessageBox>
         </div>
         

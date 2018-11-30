@@ -17,6 +17,7 @@ import {
     faBath,
     faMapMarkerAlt,
     faHeart,
+    faTimes,
 
 } from '@fortawesome/free-solid-svg-icons';
 const icons = (props)=>{
@@ -25,9 +26,11 @@ const icons = (props)=>{
         color:${props.color};
         padding: 0 7px;
         transform: scale(1.3);
+        transition: all 0.3s;
 
         :hover{
             color:${props.hoverColor};
+            transform : perspective(0.5px) scale(1.9);
         }
     `;
     let iconService ;
@@ -73,6 +76,9 @@ const icons = (props)=>{
             break;
         case "heart":
             iconService = (<StyleIcon icon={faHeart} />);
+            break;
+        case "times":
+            iconService = (<StyleIcon icon={faTimes} />);
             break;
         default:
             iconService= <p>Error</p>
