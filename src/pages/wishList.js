@@ -1,7 +1,6 @@
 import React , {Component} from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
-import { Transition } from 'react-transition-group';
 
 import * as actions from '../store/actions';
 import WishCard from '../components/UI-components/wishCard/wishCard';
@@ -45,7 +44,7 @@ class WishList extends Component{
                  this.props.onWishHotelRemoved(hotel.id);
             }}/>);
         
-        let Message = this.state.toRemove? <PopupMessage close={this.closePopupMessage}/> : null ;
+        let Message = this.state.toRemove? <PopupMessage close={this.closePopupMessage} themeColors={this.props.themeColors}/> : null ;
         return (
             <Main>
                 {wishList}
