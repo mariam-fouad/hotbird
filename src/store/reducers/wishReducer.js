@@ -25,7 +25,10 @@ const removeWishHotel =(state, hotelID)=>{
     }
 
     hotelsWishList.splice(index, 1);
-    return {...hotelsWishList};
+    return {
+        ...state,
+        wishList:hotelsWishList
+    };
 
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
 
+import * as actions from '../store/actions';
 import WishCard from '../components/UI-components/wishCard/wishCard';
 
 const wishList = (props)=>{
@@ -16,7 +17,11 @@ const wishList = (props)=>{
     height:65vh;
 `;
     const wishList = props.wish.map(hotel=>
-        <WishCard key={hotel.id} themeColors={props.themeColors} hotel={hotel}/>);
+        <WishCard 
+        key={hotel.id} 
+        themeColors={props.themeColors} 
+        hotel={hotel}
+        remove={()=>props.onWishHotelRemoved(hotel.id)}/>);
     return (
         <Main>
             {wishList}
@@ -31,4 +36,10 @@ const mapStateToProps = state=>{
       wish: state.wishReducer.wishList,
     }
   }
-export default connect (mapStateToProps)(wishList);
+
+const mapDispatchToProps=dispatch=>{
+    return {
+        onWishHotelRemoved : (hotelID)=> dispatch (actions.removeWishHotel(hotelID)),
+    }
+  }
+export default connect (mapStateToProps,mapDispatchToProps)(wishList);

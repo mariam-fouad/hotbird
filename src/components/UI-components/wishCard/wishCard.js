@@ -20,6 +20,11 @@ const wishCard = (props)=>{
     const Heart = styled.div`
         background-color : ${props.themeColors.colorSecondaryTrans};
         padding:3px;
+        cursor: pointer;
+
+        :hover{
+            background-color :${props.themeColors.colorPrimary};
+        }
     `;
 
     const Hotel = styled.div`
@@ -40,10 +45,10 @@ const wishCard = (props)=>{
     `;
     return (
         <WishCard>
-            <Heart>
+            <Heart onClick={props.remove}>
                 <Icons 
                 color={props.themeColors.colorPrimary} 
-                hoverColor={props.themeColors.colorPrimary}
+                hoverColor={props.themeColors.colorSecondary}
                 service={"heart"}/>
             </Heart>
             
