@@ -12,8 +12,26 @@ const initialState = {
     ]
 }
 
+const removeWishHotel =(state, hotelID)=>{
+    const hotelsWishList = [...state.wishList];
+    let index;
+    for (let i =0 ;i<hotelsWishList.length;i++)
+    {
+        if (hotelsWishList[i].id===hotelID)
+        {
+            index=i;
+            break;
+        }
+    }
+
+    hotelsWishList.splice(index, 1);
+    return {...hotelsWishList};
+
+}
+
 const reducer = (state=initialState,action)=>{
     switch (action.type) {
+        case actionTypes.REMOVE_WISH_HOTEL: return removeWishHotel(state, action.hotelID);
         default:return state;
     }
   }
