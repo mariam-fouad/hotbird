@@ -6,7 +6,7 @@ import Backdrop from '../Backdrop/Backdrop';
 const popupMessage = (props)=>{
 
     const MessageBox = styled.div`
-        width: 7rem;
+        padding : 5px;
         background-color: ${props.themeColors.colorSecondaryTrans};
         color: ${props.themeColors.colorPrimary};
         position: fixed;
@@ -21,7 +21,7 @@ const popupMessage = (props)=>{
         <div>
             <Backdrop close ={props.close}/>
             <MessageBox onClick = {props.close}>
-                <p>Message</p>
+                {props.children+ "is successfully removed from the wishList !"}
             </MessageBox>
         </div>
         

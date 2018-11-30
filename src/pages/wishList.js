@@ -44,7 +44,13 @@ class WishList extends Component{
                  this.props.onWishHotelRemoved(hotel.id);
             }}/>);
         
-        let Message = this.state.toRemove? <PopupMessage close={this.closePopupMessage} themeColors={this.props.themeColors}/> : null ;
+        let Message = this.state.toRemove? 
+        <PopupMessage 
+        close={this.closePopupMessage} 
+        themeColors={this.props.themeColors}>
+            {this.state.hotelName}
+        </PopupMessage> 
+        : null ;
         return (
             <Main>
                 {wishList}
