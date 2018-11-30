@@ -1,1 +1,3 @@
 export const SELECT_THEME = "SELECT_THEME";
+
+export const REMOVE_WISH_HOTEL='REMOVE_WISH_HOTEL';
