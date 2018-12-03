@@ -13,7 +13,7 @@ const leftBox = (props)=>{
     `;
     return (
         <Div>
-            <WishBox/>
+            <WishBox click={props.wishClick}/>
         </Div>
     )
 

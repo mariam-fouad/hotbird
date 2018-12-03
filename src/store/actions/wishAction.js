@@ -8,7 +8,7 @@ export const removeWishHotel = (hotelID)=>{
         type:REMOVE_WISH_HOTEL,
         hotelID: hotelID,
     }
-}
+};
 
 export const addWishHotel = (hotelID , hotelName)=>{
     return {
@@ -16,4 +16,4 @@ export const addWishHotel = (hotelID , hotelName)=>{
         hotelName: hotelName,
         id:hotelID,
     }
-}
+};

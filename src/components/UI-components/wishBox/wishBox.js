@@ -13,7 +13,7 @@ const wishBox = (props)=>{
     `;
     return (
         <HeartBox>
-            <Span>
+            <Span onClick={props.click}>
                 <Icon 
                 service="heart" 
                 color={props.themeColors.colorPrimary}

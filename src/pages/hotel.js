@@ -2,6 +2,8 @@ import React ,{Component} from 'react';
 import styled from 'styled-components'
 import {connect} from 'react-redux';
 
+import * as actions from '../store/actions';
+
 import Slider from '../components/UI-components/slider/slider';
 import HotelInfo from '../components/UI-components/hotelInfo/hotelInfo';
 import LeftBox from '../components/UI-components/leftBox/leftBox';
@@ -33,7 +35,7 @@ class hotel extends Component{
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
                 <HotelInfo hotel ={this.state.hotel} themeColors={this.props.themeColors}/>
-                <LeftBox/>
+                <LeftBox wishClick={()=>this.props.onWishHotelADD(this.state.hotelID , this.state.hotel.name)}/>
                 
             </Main>
             
@@ -48,4 +50,9 @@ const mapStateToProps = state=>{
       hotels: state.hotelReducer.hotels,
     }
   }
-export default connect (mapStateToProps)(hotel);
+  const mapDispatchToProps=dispatch=>{
+    return {
+        onWishHotelADD : (hotelID , hotelName)=> dispatch (actions.addWishHotel(hotelID,hotelName)),
+    }
+  }
+export default connect (mapStateToProps,mapDispatchToProps)(hotel);
