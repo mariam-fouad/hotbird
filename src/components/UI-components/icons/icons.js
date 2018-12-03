@@ -30,6 +30,12 @@ const icons = (props)=>{
 
         :hover{
             color:${props.hoverColor};
+            transform : scale(1.5);
+        }
+    `;
+
+    const StyleTimes = styled(StyleIcon)`
+        :hover{
             transform : perspective(0.5px) scale(1.9);
         }
     `;
@@ -78,7 +84,7 @@ const icons = (props)=>{
             iconService = (<StyleIcon icon={faHeart} />);
             break;
         case "times":
-            iconService = (<StyleIcon icon={faTimes} />);
+            iconService = (<StyleTimes icon={faTimes} />);
             break;
         default:
             iconService= <p>Error</p>
