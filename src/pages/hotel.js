@@ -7,12 +7,14 @@ import * as actions from '../store/actions';
 import Slider from '../components/UI-components/slider/slider';
 import HotelInfo from '../components/UI-components/hotelInfo/hotelInfo';
 import LeftBox from '../components/UI-components/leftBox/leftBox';
+import PopupMessage from '../components/UI-components/popupMessage/popupMessage';
 
 class hotel extends Component{
 
     state={
         id:null,
         hotel:null,
+        addToWishList:false,
     }
 
     getHotelInfo = (id)=>{
@@ -25,18 +27,37 @@ class hotel extends Component{
             hotel:this.getHotelInfo(hotelID),
         });
     }
+
+    closeWishPopupMessage= ()=>{
+        this.setState({
+            addToWishList:false,
+        })
+    }
     render(){
         const Main = styled.main`
             height:30rem;
             margin-bottom: 2rem;
         `;
-
+    
+        const WishMessage = this.state.addToWishList? 
+            <PopupMessage 
+            close={this.closeWishPopupMessage} 
+            themeColors={this.props.themeColors}>
+                {this.state.hotel.name+ "is successfully added to the wishList !"}
+            </PopupMessage> 
+            : null;
         return (
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
                 <HotelInfo hotel ={this.state.hotel} themeColors={this.props.themeColors}/>
-                <LeftBox wishClick={()=>this.props.onWishHotelADD(this.state.hotelID , this.state.hotel.name)}/>
-                
+                <LeftBox wishClick={()=>{
+                    this.setState({
+                        addToWishList:true,
+                    });
+
+                    this.props.onWishHotelADD(this.state.hotelID , this.state.hotel.name)}
+                    }/>
+                {WishMessage}
             </Main>
             
         );
