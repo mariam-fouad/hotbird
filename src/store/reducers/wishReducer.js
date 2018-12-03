@@ -42,7 +42,7 @@ const addWishHotel = (state, id , hotelName)=>{
             id:id
     };
 
-    if (getHotelID(id)!==-1){ //return the same state if the hotel already exist
+    if (getHotelID(hotelsWishList,id)!==-1){ //return the same state if the hotel already exist
         return state;
     }
     hotelsWishList.push(newHotel);
