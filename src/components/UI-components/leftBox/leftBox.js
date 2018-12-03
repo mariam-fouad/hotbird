@@ -1,11 +1,17 @@
-import React ,{Component} from 'react';
+import React  from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
 const leftBox = (props)=>{
-
+    const Div = styled.div`
+        position: fixed;
+        top: 50%;
+        left: 0;
+        display: flex;
+        flex-flow: column;
+    `;
     return (
-        <div>Left Box</div>
+        <Div>Left Box</Div>
     )
 
 }
