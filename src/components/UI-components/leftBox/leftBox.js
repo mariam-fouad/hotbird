@@ -1,6 +1,5 @@
 import React  from 'react';
 import styled from 'styled-components';
-import {connect} from 'react-redux';
 
 import WishBox from '../wishBox/wishBox';
 
@@ -20,9 +19,5 @@ const leftBox = (props)=>{
 
 }
 
-const mapStateToProps = state=>{
-    return {
-      themeColors: state.themeReducer.themes[state.themeReducer.selectedTheme],
-    }
-  }
-export default connect (mapStateToProps)(leftBox);
+
+export default leftBox;
