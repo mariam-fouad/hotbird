@@ -2,6 +2,8 @@ import React  from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
+import WishBox from '../wishBox/wishBox';
+
 const leftBox = (props)=>{
     const Div = styled.div`
         position: fixed;
@@ -11,7 +13,9 @@ const leftBox = (props)=>{
         flex-flow: column;
     `;
     return (
-        <Div>Left Box</Div>
+        <Div>
+            <WishBox/>
+        </Div>
     )
 
 }
