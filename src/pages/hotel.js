@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import Slider from '../components/UI-components/slider/slider';
 import HotelInfo from '../components/UI-components/hotelInfo/hotelInfo';
+import LeftBox from '../components/UI-components/leftBox/leftBox';
 
 class hotel extends Component{
 
@@ -32,6 +33,7 @@ class hotel extends Component{
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
                 <HotelInfo hotel ={this.state.hotel} themeColors={this.props.themeColors}/>
+                <LeftBox/>
                 
             </Main>
             
