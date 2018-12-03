@@ -12,17 +12,20 @@ const initialState = {
     ]
 }
 
-const removeWishHotel =(state, hotelID)=>{
-    const hotelsWishList = [...state.wishList];
-    let index;
-    for (let i =0 ;i<hotelsWishList.length;i++)
+const getHotelID = (hotelList , id )=>{
+    for (let i =0 ;i<hotelList.length;i++)
     {
-        if (hotelsWishList[i].id===hotelID)
+        if (hotelList[i].id===id)
         {
-            index=i;
-            break;
+           return i;
         }
     }
+
+    return -1;
+}
+const removeWishHotel =(state, hotelID)=>{
+    const hotelsWishList = [...state.wishList];
+    let index = getHotelID(hotelsWishList,hotelID);
 
     hotelsWishList.splice(index, 1);
     return {
@@ -32,9 +35,27 @@ const removeWishHotel =(state, hotelID)=>{
 
 }
 
+const addWishHotel = (state, id , hotelName)=>{
+    const hotelsWishList = [...state.wishList];
+    const newHotel = {
+        hotelName: hotelName,
+            id:id
+    };
+
+    if (getHotelID(id)!==-1){ //return the same state if the hotel already exist
+        return state;
+    }
+    hotelsWishList.push(newHotel);
+
+    return {
+        ...state,
+        wishList:hotelsWishList
+    };
+}
 const reducer = (state=initialState,action)=>{
     switch (action.type) {
         case actionTypes.REMOVE_WISH_HOTEL: return removeWishHotel(state, action.hotelID);
+        case actionTypes.ADD_WISH_HOTEL : return addWishHotel(state, action.id, action.hotelName);
         default:return state;
     }
   }
