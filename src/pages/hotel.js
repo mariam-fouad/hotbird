@@ -55,7 +55,7 @@ class hotel extends Component{
                         addToWishList:true,
                     });
 
-                    this.props.onWishHotelADD(this.state.hotelID , this.state.hotel.name)}
+                    this.props.onWishHotelADD(this.state.hotel.id , this.state.hotel.name)}
                     }/>
                 {WishMessage}
             </Main>
