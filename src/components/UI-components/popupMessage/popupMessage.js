@@ -8,7 +8,7 @@ const popupMessage = (props)=>{
 
     const MessageBox = styled.div`
         padding : 5px;
-        background-color: ${props.themeColors.colorSecondaryTrans};
+        background-color: ${props.themeColors.colorSecondary};
         color: ${props.themeColors.colorPrimary};
         position: fixed;
         top: 50%;
