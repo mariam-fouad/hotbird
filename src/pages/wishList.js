@@ -48,7 +48,7 @@ class WishList extends Component{
         <PopupMessage 
         close={this.closePopupMessage} 
         themeColors={this.props.themeColors}>
-            {this.state.hotelName}
+            {this.state.hotelName+ "is successfully removed from the wishList !"}
         </PopupMessage> 
         : null ;
         return (

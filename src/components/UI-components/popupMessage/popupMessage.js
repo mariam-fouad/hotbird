@@ -26,7 +26,7 @@ const popupMessage = (props)=>{
         <div>
             <Backdrop close ={props.close}/>
             <MessageBox>
-                {props.children+ "is successfully removed from the wishList !"}
+                {props.children}
                 <CloseSpan  onClick = {props.close}>
                     <Icon 
                     service="times" 
