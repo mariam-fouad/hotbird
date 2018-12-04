@@ -8,11 +8,11 @@ const initialState = {
             rateMessage:"Enjoy the sea view and the warm sun. Great hoilday I recommend it",
        },
        {
-        id:4,
-        hotelName:"Paradise",
-        rate:10,
-        rateMessage:"As it name suggest a ture paradise in earth. Definitely going again",
-   },
+            id:4,
+            hotelName:"Paradise",
+            rate:10,
+            rateMessage:"As it name suggest a ture paradise in earth. Definitely going again",
+        },
 
    ]
   };
