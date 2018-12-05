@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 const initialState = {
-   rateing:[
+   rating:[
        {
             id:2,
             hotelName:"Sun Shine",
