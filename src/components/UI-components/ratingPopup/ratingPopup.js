@@ -56,7 +56,7 @@ class ratingPopup extends Component{
                 <Backdrop close={this.props.onCancel} />
                 <Popup>
                     <h2>{this.props.hotelName+" review"}</h2>
-                    <StarsRating/>
+                    <StarsRating />
                     <IconStyled onClick={this.props.onCancel}>
                         <Icon service="times" 
                         color={this.props.themeColors.colorPrimary}

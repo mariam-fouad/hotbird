@@ -21,6 +21,10 @@ import {
     faStar,
 
 } from '@fortawesome/free-solid-svg-icons';
+
+import {
+    faStar as faStarRegular 
+ } from '@fortawesome/free-regular-svg-icons';
 const icons = (props)=>{
 
     const StyleIcon = styled(FontAwesomeIcon)`
@@ -93,6 +97,9 @@ const icons = (props)=>{
             break;
         case "star-card":
             iconService = (<StyleStarCards icon={faStar} />);
+            break;
+        case "star-regular":
+            iconService = (<StyleIcon icon={faStarRegular}/>);
             break;
         default:
             iconService= <p>Error</p>
