@@ -54,7 +54,9 @@ const ratingCard = (props)=>{
                         {props.rating.hotelName}
                 </HotelName>
             </div>
-            {stars}
+            <div onClick={props.onRate}>
+                {stars}
+            </div>
             <HotelReview>
                 {props.rating.rateMessage}
             </HotelReview>

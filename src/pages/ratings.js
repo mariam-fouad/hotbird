@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import RatingPopUp from '../components/UI-components/ratingPopup/ratingPopup';
 import RatingCard from '../components/UI-components/ratingCard/ratingCard';
-import { faTruckMonster } from '@fortawesome/free-solid-svg-icons';
 class Ratings extends Component{
     state ={
         toRate:false,
@@ -37,13 +36,16 @@ class Ratings extends Component{
         `;
 
         const ratingCard = this.props.ratings.map(rating=>{
-            return <RatingCard key ={rating.id} themeColors={this.props.themeColors} rating={rating} onRate={()=>this.onRate(rating)}/>
-        })
+            return <RatingCard key ={rating.id} themeColors={this.props.themeColors} rating={rating} onRate={()=>this.onRateing(rating)}/>
+        });
+
+        const ratingPopup = this.state.toRate? <RatingPopUp/> :null;
         return (
             <Main>
                 <CardWrap>
                     {ratingCard}
                 </CardWrap>
+                {ratingPopup}
             </Main>
             
         );
