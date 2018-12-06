@@ -39,7 +39,6 @@ class Ratings extends Component{
     }
 
     onSubmit=(rateMessage)=>{
-        console.log(rateMessage);
         this.props.onChangeRating(this.state.id,this.state.name,this.state.rate,rateMessage);
     }
 
@@ -86,7 +85,7 @@ const mapStateToProps = state=>{
 
 const mapDispatchToProps=dispatch=>{
     return {
-        onChangeRating : (hotelID,hotelName,rate,rateMessage)=> dispatch (actions.removeWishHotel(hotelID,hotelName,rate,rateMessage)),
+        onChangeRating : (hotelID,hotelName,rate,rateMessage)=> dispatch (actions.addRating(hotelID,hotelName,rate,rateMessage)),
     }
   }
 export default connect (mapStateToProps,mapDispatchToProps)(Ratings);

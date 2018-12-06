@@ -41,11 +41,12 @@ class ratingPopup extends Component{
                         color={this.props.themeColors.colorPrimary}
                         hoverColor={this.props.themeColors.colorPrimary}/>
                     </IconStyled>
-                    <input 
+                    <textarea 
                     type="text" 
                     autoFocus
                     value={this.state.review} 
-                    onChange={this.reviewChangeValue}/>
+                    onChange={this.reviewChangeValue}>
+                    </textarea>
                     <div onClick={()=>this.props.onSubmit(this.state.review)}>
                         ADD
                     </div>
