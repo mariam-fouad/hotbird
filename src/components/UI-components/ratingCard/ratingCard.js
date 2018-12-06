@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 import Icon from '../icons/icons';
 const ratingCard = (props)=>{
@@ -13,8 +14,20 @@ const ratingCard = (props)=>{
         color: ${props.themeColors.colorPrimary};
     `;
 
-    const HotelName = styled.h2`
-        font-size:10px;
+    const HotelName = styled(Link)`
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        display: inline-block;
+        padding: 2px;
+        margin: 3px;
+        font-size: 13px;
+        font-weight: 500;
+        color: ${props.themeColors.colorPrimary};
+        transition: all 0.4s;
+
+        :hover{
+            border-color:${props.themeColors.colorPrimary};
+        }
     `;
 
     const HotelReview = styled.div`
@@ -35,9 +48,11 @@ const ratingCard = (props)=>{
     }
     return (
         <Card>
-            <HotelName>
-                {props.rating.hotelName}
-            </HotelName>
+            <div>
+                <HotelName to={"/hotel/"+props.rating.id} >
+                        {props.rating.hotelName}
+                </HotelName>
+            </div>
             {stars}
             <HotelReview>
                 {props.rating.rateMessage}
