@@ -39,12 +39,10 @@ const ratingCard = (props)=>{
     for (let i=0;i<props.rating.rate;i++)
     {
         stars.push(
-            <span key={i}>
-                <Icon service="star-card" 
+                <Icon service="star-card" key={i}
                 color={props.themeColors.colorPrimary}
                 hoverColor={props.themeColors.colorPrimary}
                 />
-            </span>
         )
     }
     return (
