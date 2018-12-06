@@ -35,6 +35,12 @@ const ratingCard = (props)=>{
         margin-top:9px;
     `;
 
+    const StarDiv = styled.div`
+        padding:3px;
+        cursor: pointer;
+        display: inline-block;
+    `;
+
     let stars=[];
     for (let i=0;i<props.rating.rate;i++)
     {
@@ -52,9 +58,9 @@ const ratingCard = (props)=>{
                         {props.rating.hotelName}
                 </HotelName>
             </div>
-            <div onClick={props.onRate}>
+            <StarDiv onClick={props.onRate}>
                 {stars}
-            </div>
+            </StarDiv>
             <HotelReview>
                 {props.rating.rateMessage}
             </HotelReview>
