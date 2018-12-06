@@ -7,14 +7,25 @@ import StarsRating from '../starsRating/starsRating';
 class ratingPopup extends Component{
     state ={
         review:"",
+        rate:null,
     }
 
     componentWillMount() {
-        this.state.review=this.props.rateMessage;
+        this.setState ({
+            review:this.props.rateMessage,
+            rate:this.props.rate,
+        })
     }
     reviewChangeValue = (event)=>{
         this.setState({
             review: event.target.value
+        });
+    }
+
+    rateChangeValue = (rate)=>{
+        console.log(rate);
+        this.setState({
+            rate: rate
         });
     }
     render (){
@@ -56,9 +67,12 @@ class ratingPopup extends Component{
                 <Backdrop close={this.props.onCancel} />
                 <Popup>
                     <h2>{this.props.hotelName+" review"}</h2>
+                    
                     <StarsRating 
-                    rate={this.props.rate}
-                    themeColors={this.props.themeColors}/>
+                    rate={this.state.rate}
+                    themeColors={this.props.themeColors}
+                    changeRate={(rate)=>this.rateChangeValue(rate)}/>
+
                     <IconStyled onClick={this.props.onCancel}>
                         <Icon service="times" 
                         color={this.props.themeColors.colorPrimary}

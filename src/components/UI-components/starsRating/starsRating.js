@@ -7,29 +7,38 @@ const starsRating = (props)=>{
     for (let i=1;i<=5;i++){
         if(i<=props.rate){
             stars.push(
-                <Icon 
-                key={i} 
-                service="star"
-                color={props.themeColors.colorPrimary}
-                hoverColor={props.themeColors.colorPrimary}/>
+                <span key={i} onClick={()=>props.changeRate(i)} onMouseEnter={()=>props.changeRate(i)}>
+                    <Icon  
+                    service="star"
+                    color={props.themeColors.colorPrimary}
+                    hoverColor={props.themeColors.colorPrimary}/>
+                </span>
+                
             )
         }
         else{
             stars.push(
-                <Icon 
-                key={i} 
-                service="star-regular"
-                color={props.themeColors.colorPrimary}
-                hoverColor={props.themeColors.colorPrimary}/>
+                <span key={i} onClick={()=>props.changeRate(i)} onMouseEnter={()=>props.changeRate(i)}>
+                    <Icon 
+                    service="star-regular"
+                    color={props.themeColors.colorPrimary}
+                    hoverColor={props.themeColors.colorPrimary}/>
+                </span>
+                
             )
         }
         
     }
 
+    const StarsDiv = styled.div`
+        margin: 5px;
+        margin-bottom: 12px;
+    `;
+
     return (
-        <div>
+        <StarsDiv>
             {stars}
-        </div>
+        </StarsDiv>
     )
 }
 export default starsRating;
