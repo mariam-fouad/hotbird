@@ -7,6 +7,7 @@ const ratingCard = (props)=>{
 
     const Card = styled.div`
         width: 9rem;
+        height: 6.5rem;
         background-color:${props.themeColors.colorSecondaryTrans};
         padding: 0.5rem;
         border-radius: 3px;
