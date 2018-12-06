@@ -4,13 +4,13 @@ const initialState = {
        {
             id:2,
             hotelName:"Sun Shine",
-            rate:8,
+            rate:4,
             rateMessage:"Enjoy the sea view and the warm sun. Great hoilday I recommend it",
        },
        {
             id:4,
             hotelName:"Paradise",
-            rate:10,
+            rate:5,
             rateMessage:"As it name suggest a ture paradise in earth. Definitely going again",
         },
 
