@@ -1,30 +1,54 @@
-import React from 'react';
+import React,{Component} from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
+import RatingPopUp from '../components/UI-components/ratingPopup/ratingPopup';
 import RatingCard from '../components/UI-components/ratingCard/ratingCard';
-const ratings = (props)=>{
-    const Main = styled.main`
-        margin: 4rem;
-    `;
+import { faTruckMonster } from '@fortawesome/free-solid-svg-icons';
+class Ratings extends Component{
+    state ={
+        toRate:false,
+        id:null,
+        name:null,
+        rate:null,
+        rateMessage:null,
+    }
 
-    const CardWrap = styled.div`
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    `;
+    onRateing = (oldRating)=>{
+        this.setState(
+            {
+                toRate:true,
+                id:oldRating.id,
+                name:oldRating.hotelName,
+                rate:oldRating.rate,
+                rateMessage:oldRating.rateMessage
+            }
+        )
+    }
+    render(){
+        const Main = styled.main`
+            margin: 4rem;
+        `;
 
-    const ratingCard = props.ratings.map(rating=>{
-        return <RatingCard key ={rating.id} themeColors={props.themeColors} rating={rating} />
-    })
-    return (
-        <Main>
-            <CardWrap>
-                {ratingCard}
-            </CardWrap>
-        </Main>
-        
-    );
+        const CardWrap = styled.div`
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        `;
+
+        const ratingCard = this.props.ratings.map(rating=>{
+            return <RatingCard key ={rating.id} themeColors={this.props.themeColors} rating={rating} onRate={()=>this.onRate(rating)}/>
+        })
+        return (
+            <Main>
+                <CardWrap>
+                    {ratingCard}
+                </CardWrap>
+            </Main>
+            
+        );
+    }
+    
 }
 
 const mapStateToProps = state=>{
@@ -33,4 +57,4 @@ const mapStateToProps = state=>{
       ratings: state.ratingReducer.rating,
     }
   }
-export default connect (mapStateToProps)(ratings);
+export default connect (mapStateToProps)(Ratings);

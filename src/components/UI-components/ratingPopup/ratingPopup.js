@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const ratingPopup = (props)=>{
     return (
-        <p>
-            ratingPopup
-        </p>
+        <textarea>
+            
+        </textarea>
     )
 }
 
