@@ -101,6 +101,9 @@ const icons = (props)=>{
         case "star-regular":
             iconService = (<StyleIcon icon={faStarRegular}/>);
             break;
+        case "star":
+            iconService = (<StyleIcon icon={faStar}/>);
+            break;
         default:
             iconService= <p>Error</p>
     }
