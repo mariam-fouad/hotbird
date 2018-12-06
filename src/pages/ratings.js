@@ -59,6 +59,8 @@ class Ratings extends Component{
 
         const ratingPopup = this.state.toRate? 
             <RatingPopUp 
+            rateMessage = {this.state.rateMessage}
+            rate={this.state.rate}
             themeColors={this.props.themeColors} 
             onCancel ={this.onCancel}
             onSubmit ={(rateMessage)=>this.onSubmit(rateMessage)}/> 

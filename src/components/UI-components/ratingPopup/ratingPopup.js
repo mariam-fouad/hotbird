@@ -8,6 +8,9 @@ class ratingPopup extends Component{
         review:"",
     }
 
+    componentWillMount() {
+        this.state.review=this.props.rateMessage;
+    }
     reviewChangeValue = (event)=>{
         this.setState({
             review: event.target.value
@@ -32,6 +35,20 @@ class ratingPopup extends Component{
             padding:1px;
         `;
         
+        const TextArea = styled.textarea`
+            width: 200px;
+            height: 70px;
+            padding:5px;
+            font-size: 10px;
+            color: ${this.props.themeColors.colorPrimary};
+            border-radius: 3px;
+            box-shadow: none;
+            resize: none;
+            border: none;
+            overflow: auto;
+            outline: none;
+            background-color: #ffffff8f;
+        `
         return (
             <React.Fragment>
                 <Backdrop close={this.props.onCancel} />
@@ -41,12 +58,11 @@ class ratingPopup extends Component{
                         color={this.props.themeColors.colorPrimary}
                         hoverColor={this.props.themeColors.colorPrimary}/>
                     </IconStyled>
-                    <textarea 
+                    <TextArea 
                     type="text" 
                     autoFocus
                     value={this.state.review} 
-                    onChange={this.reviewChangeValue}>
-                    </textarea>
+                    onChange={this.reviewChangeValue}/>
                     <div onClick={()=>this.props.onSubmit(this.state.review)}>
                         ADD
                     </div>
