@@ -39,7 +39,9 @@ class Ratings extends Component{
             return <RatingCard key ={rating.id} themeColors={this.props.themeColors} rating={rating} onRate={()=>this.onRateing(rating)}/>
         });
 
-        const ratingPopup = this.state.toRate? <RatingPopUp/> :null;
+        const ratingPopup = this.state.toRate? 
+        <RatingPopUp themeColors={this.props.themeColors}/> 
+        :null;
         return (
             <Main>
                 <CardWrap>
