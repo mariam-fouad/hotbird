@@ -23,7 +23,6 @@ class ratingPopup extends Component{
     }
 
     rateChangeValue = (rate)=>{
-        console.log(rate);
         this.setState({
             rate: rate
         });
@@ -67,7 +66,7 @@ class ratingPopup extends Component{
                 <Backdrop close={this.props.onCancel} />
                 <Popup>
                     <h2>{this.props.hotelName+" review"}</h2>
-                    
+
                     <StarsRating 
                     rate={this.state.rate}
                     themeColors={this.props.themeColors}
@@ -83,7 +82,7 @@ class ratingPopup extends Component{
                     autoFocus
                     value={this.state.review} 
                     onChange={this.reviewChangeValue}/>
-                    <div onClick={()=>this.props.onSubmit(this.state.review)}>
+                    <div onClick={()=>this.props.onSubmit(this.state.review, this.state.rate)}>
                         ADD
                     </div>
                 </Popup>

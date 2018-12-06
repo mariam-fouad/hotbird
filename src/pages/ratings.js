@@ -38,8 +38,8 @@ class Ratings extends Component{
         )
     }
 
-    onSubmit=(rateMessage)=>{
-        this.props.onChangeRating(this.state.id,this.state.name,this.state.rate,rateMessage);
+    onSubmit=(rateMessage,rate)=>{
+        this.props.onChangeRating(this.state.id,this.state.name,rate,rateMessage);
     }
 
     render(){
@@ -64,7 +64,7 @@ class Ratings extends Component{
             rate={this.state.rate}
             themeColors={this.props.themeColors} 
             onCancel ={this.onCancel}
-            onSubmit ={(rateMessage)=>this.onSubmit(rateMessage)}/> 
+            onSubmit ={(rateMessage,rate)=>this.onSubmit(rateMessage,rate)}/> 
             :null;
         return (
             <Main>
