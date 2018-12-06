@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
+import * as  actions from '../store/actions';
 import RatingPopUp from '../components/UI-components/ratingPopup/ratingPopup';
 import RatingCard from '../components/UI-components/ratingCard/ratingCard';
 class Ratings extends Component{
@@ -37,6 +38,11 @@ class Ratings extends Component{
         )
     }
 
+    onSubmit=(rateMessage)=>{
+        console.log(rateMessage);
+        this.props.onChangeRating(this.state.id,this.state.name,this.state.rate,rateMessage);
+    }
+
     render(){
         const Main = styled.main`
             margin: 4rem;
@@ -53,8 +59,11 @@ class Ratings extends Component{
         });
 
         const ratingPopup = this.state.toRate? 
-        <RatingPopUp themeColors={this.props.themeColors} onCancel ={this.onCancel}/> 
-        :null;
+            <RatingPopUp 
+            themeColors={this.props.themeColors} 
+            onCancel ={this.onCancel}
+            onSubmit ={(rateMessage)=>this.onSubmit(rateMessage)}/> 
+            :null;
         return (
             <Main>
                 <CardWrap>
@@ -74,4 +83,10 @@ const mapStateToProps = state=>{
       ratings: state.ratingReducer.rating,
     }
   }
-export default connect (mapStateToProps)(Ratings);
+
+const mapDispatchToProps=dispatch=>{
+    return {
+        onChangeRating : (hotelID,hotelName,rate,rateMessage)=> dispatch (actions.removeWishHotel(hotelID,hotelName,rate,rateMessage)),
+    }
+  }
+export default connect (mapStateToProps,mapDispatchToProps)(Ratings);
