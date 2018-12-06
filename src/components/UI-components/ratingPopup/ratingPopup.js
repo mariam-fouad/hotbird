@@ -20,6 +20,7 @@ class ratingPopup extends Component{
         const Popup = styled.div`
             z-index:1000;
             background-color:${this.props.themeColors.colorSecondary};
+            color:${this.props.themeColors.colorPrimary};
             width: 40vw;
             padding:10px;
             position: fixed;
@@ -53,6 +54,7 @@ class ratingPopup extends Component{
             <React.Fragment>
                 <Backdrop close={this.props.onCancel} />
                 <Popup>
+                    <h2>{this.props.hotelName+" review"}</h2>
                     <IconStyled onClick={this.props.onCancel}>
                         <Icon service="times" 
                         color={this.props.themeColors.colorPrimary}

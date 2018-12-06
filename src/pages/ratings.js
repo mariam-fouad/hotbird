@@ -59,6 +59,7 @@ class Ratings extends Component{
 
         const ratingPopup = this.state.toRate? 
             <RatingPopUp 
+            hotelName= {this.state.name}
             rateMessage = {this.state.rateMessage}
             rate={this.state.rate}
             themeColors={this.props.themeColors} 
