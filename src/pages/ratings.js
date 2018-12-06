@@ -10,6 +10,7 @@ const ratings = (props)=>{
 
     const CardWrap = styled.div`
         display:flex;
+        flex-wrap: wrap;
     `;
 
     const ratingCard = props.ratings.map(rating=>{
