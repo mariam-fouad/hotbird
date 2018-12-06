@@ -2,3 +2,5 @@ export const SELECT_THEME = "SELECT_THEME";
 
 export const REMOVE_WISH_HOTEL='REMOVE_WISH_HOTEL';
 export const ADD_WISH_HOTEL = 'ADD_WISH_HOTEL';
+
+export const ADD_RATING = 'ADD_RATING';
