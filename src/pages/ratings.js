@@ -40,6 +40,15 @@ class Ratings extends Component{
 
     onSubmit=(rateMessage,rate)=>{
         this.props.onChangeRating(this.state.id,this.state.name,rate,rateMessage);
+        this.setState(
+            {
+                toRate:false,
+                id:null,
+                name:null,
+                rate:null,
+                rateMessage:null
+            }
+        )
     }
 
     render(){
