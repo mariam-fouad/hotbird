@@ -17,6 +17,10 @@ const ratingCard = (props)=>{
         font-size:10px;
     `;
 
+    const HotelReview = styled.div`
+        margin-top:9px;
+    `;
+
     let stars=[];
     for (let i=0;i<props.rating.rate;i++)
     {
@@ -35,6 +39,9 @@ const ratingCard = (props)=>{
                 {props.rating.hotelName}
             </HotelName>
             {stars}
+            <HotelReview>
+                {props.rating.rateMessage}
+            </HotelReview>
             
         </Card>
     )
