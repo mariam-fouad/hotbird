@@ -24,6 +24,19 @@ class Ratings extends Component{
             }
         )
     }
+
+    onCancel=()=>{
+        this.setState(
+            {
+                toRate:false,
+                id:null,
+                name:null,
+                rate:null,
+                rateMessage:null
+            }
+        )
+    }
+
     render(){
         const Main = styled.main`
             margin: 4rem;
@@ -40,7 +53,7 @@ class Ratings extends Component{
         });
 
         const ratingPopup = this.state.toRate? 
-        <RatingPopUp themeColors={this.props.themeColors}/> 
+        <RatingPopUp themeColors={this.props.themeColors} onCancel ={this.onCancel}/> 
         :null;
         return (
             <Main>
