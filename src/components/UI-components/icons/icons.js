@@ -41,7 +41,7 @@ const icons = (props)=>{
         }
     `;
     const StyleStarCards = styled(StyleIcon)`
-        transform: scale(0.6);
+        transform: scale(0.8);
         padding: 0;
     `;
     let iconService ;
