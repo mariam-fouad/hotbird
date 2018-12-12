@@ -8,6 +8,7 @@ import Slider from '../components/UI-components/slider/slider';
 import HotelInfo from '../components/UI-components/hotelInfo/hotelInfo';
 import LeftBox from '../components/UI-components/leftBox/leftBox';
 import PopupMessage from '../components/UI-components/popupMessage/popupMessage';
+import RatingPopup from '../components/UI-components/ratingPopup/ratingPopup';
 
 class hotel extends Component{
 
@@ -16,6 +17,8 @@ class hotel extends Component{
         hotel:null,
         addToWishList:false,
         rating:false,
+        rate:0,
+        rateMessage:"",
     }
 
     getHotelInfo = (id)=>{
@@ -34,6 +37,18 @@ class hotel extends Component{
             addToWishList:false,
         })
     }
+
+    closeRateMessage=()=>{
+        this.setState({
+            rating:false,
+        });
+    }
+    submitRating=(rate,rateMessage)=>{
+        this.props.onAddRating(this.state.hotel.id , this.state.hotel.name ,rate,rateMessage);
+        this.setState({
+            rating:false,
+        });
+    }
     render(){
         const Main = styled.main`
             height:30rem;
@@ -48,7 +63,16 @@ class hotel extends Component{
             </PopupMessage> 
             : null;
 
-        
+        const RatingBox = this.state.rating?
+        <RatingPopup 
+        hotelName={this.state.hotel.name}
+        themeColors={this.props.themeColors}
+        onCancel={this.closeRateMessage}
+        review={this.state.rateMessage}
+        rate={this.state.rate}
+        onSubmit={(rateMessage,rate)=>{this.submitRating(rate,rateMessage)}}
+        />
+        :null;
         return (
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
@@ -67,6 +91,7 @@ class hotel extends Component{
                     }}
                     />
                 {WishMessage}
+                {RatingBox}
             </Main>
             
         );
@@ -83,6 +108,7 @@ const mapStateToProps = state=>{
   const mapDispatchToProps=dispatch=>{
     return {
         onWishHotelADD : (hotelID , hotelName)=> dispatch (actions.addWishHotel(hotelID,hotelName)),
+        onAddRating: (hotelID, hotelName ,rate , rateMessage)=>dispatch (actions.addRating(hotelID,hotelName,rate,rateMessage)),
     }
   }
 export default connect (mapStateToProps,mapDispatchToProps)(hotel);
