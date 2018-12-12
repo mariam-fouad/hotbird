@@ -65,6 +65,16 @@ class ratingPopup extends Component{
                 width:100px;
             }
         `
+        const Button= styled.div`
+            cursor:pointer;
+            display: inline-block;
+            font-size: 12px;
+            background-color: #ffffff8f;
+            padding:3px;
+            margin-top: 3px;
+            border-radius: 2px;
+            box-shadow: 0.5px 1px 1px #ccc;
+        `;
         return (
             <React.Fragment>
                 <Backdrop close={this.props.onCancel} />
@@ -86,9 +96,12 @@ class ratingPopup extends Component{
                     autoFocus
                     value={this.state.review} 
                     onChange={this.reviewChangeValue}/>
-                    <div onClick={()=>this.props.onSubmit(this.state.review, this.state.rate)}>
-                        ADD
+                    <div>
+                        <Button onClick={()=>this.props.onSubmit(this.state.review, this.state.rate)}>
+                            ADD
+                        </Button>
                     </div>
+                    
                 </Popup>
             </React.Fragment>
         
