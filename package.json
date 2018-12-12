@@ -2,6 +2,7 @@
   "name": "hotbird",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://mariam-fouad.github.io/hotbird/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-regular-svg-icons": "^5.5.0",
