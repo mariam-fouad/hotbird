@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch , Route ,withRouter,Redirect} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons';
 
 import './App.css';
