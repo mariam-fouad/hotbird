@@ -54,6 +54,7 @@ class Ratings extends Component{
     render(){
         const Main = styled.main`
             margin: 4rem;
+            height:65vh;
         `;
 
         const CardWrap = styled.div`
