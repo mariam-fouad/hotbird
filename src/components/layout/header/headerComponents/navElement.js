@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import { NavLink , withRouter} from 'react-router-dom'
-import {connect} from 'react-redux';
 
 const navElement =(props)=>{
     const NavItem = styled.li`
@@ -67,9 +66,4 @@ const navElement =(props)=>{
     );
 }
 
-const mapStateToProps = state=>{
-    return {
-      themeColors: state.themeReducer.themes[state.themeReducer.selectedTheme],
-    }
-  }
-export default withRouter(connect(mapStateToProps)(navElement));
+export default withRouter(navElement);

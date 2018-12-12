@@ -123,11 +123,10 @@ const nav =(props)=>{
             <Label htmlFor="nav-checkbox"> <Span/> </Label>
             <BackGround/>
             <List>
-                <NavElement link="/hotels">Hotels</NavElement>
-                <NavElement link="/hotels-activities">Hotels activities</NavElement>
-                <NavElement link="/ratings">You're Rating</NavElement>
-                <NavElement link="/wishlist">You're Wishlist</NavElement>
-                <NavElement link="/theme">Theme</NavElement>
+                <NavElement link="/hotels" themeColors={props.themeColors} >Hotels</NavElement>
+                <NavElement link="/ratings" themeColors={props.themeColors}>You're Rating</NavElement>
+                <NavElement link="/wishlist" themeColors={props.themeColors}>You're Wishlist</NavElement>
+                <NavElement link="/theme" themeColors={props.themeColors}>Theme</NavElement>
             </List>
         </Nav>
     );
