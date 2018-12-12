@@ -7,6 +7,7 @@ const ratingBox = (props)=>{
     const StarBox = styled.div`
         background-color: ${props.themeColors.colorSecondaryTrans};
         padding: 5px 2px;
+        border-top: 1px solid ${props.themeColors.colorPrimary};
     `;
     const Span = styled.span`
         cursor: pointer;
