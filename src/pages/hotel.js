@@ -15,6 +15,7 @@ class hotel extends Component{
         id:null,
         hotel:null,
         addToWishList:false,
+        rating:false,
     }
 
     getHotelInfo = (id)=>{
@@ -46,6 +47,8 @@ class hotel extends Component{
                 {this.state.hotel.name+ " is successfully added to the your wishList !"}
             </PopupMessage> 
             : null;
+
+        
         return (
             <Main>
                 <Slider imagesURL={this.state.hotel.imagesFolder}/>
@@ -56,7 +59,13 @@ class hotel extends Component{
                     });
 
                     this.props.onWishHotelADD(this.state.hotel.id , this.state.hotel.name)}
-                    }/>
+                    }
+                    ratingClick={()=>{
+                        this.setState({
+                            rating:true,
+                        });
+                    }}
+                    />
                 {WishMessage}
             </Main>
             

@@ -2,6 +2,7 @@ import React  from 'react';
 import styled from 'styled-components';
 
 import WishBox from '../wishBox/wishBox';
+import RatingBox from '../ratingBox/ratingBox';
 
 const leftBox = (props)=>{
     const Div = styled.div`
@@ -14,6 +15,7 @@ const leftBox = (props)=>{
     return (
         <Div>
             <WishBox click={props.wishClick}/>
+            <RatingBox click={props.ratingClick}/>
         </Div>
     )
 
