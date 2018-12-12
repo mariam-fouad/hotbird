@@ -60,6 +60,10 @@ class ratingPopup extends Component{
             overflow: auto;
             outline: none;
             background-color: #ffffff8f;
+
+            @media (max-width:600px){
+                width:100px;
+            }
         `
         return (
             <React.Fragment>
